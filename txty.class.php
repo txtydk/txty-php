@@ -12,6 +12,7 @@ class Authentication
 	 * Return user ang key informations
 	 * @param array Array of user and key
 	*/
+
 	public function getAuthentication()
 	{
 		return $this->authentication;
@@ -40,7 +41,6 @@ class Txty
 
 		// Add user credentials
 		$query = http_build_query($query ? $this->authentication->getAuthentication() + $query : $this->authentication->getAuthentication());
-
 
 		// Set URL
 		$url = $this->baseurl . '/' . $page . '/api.json';
